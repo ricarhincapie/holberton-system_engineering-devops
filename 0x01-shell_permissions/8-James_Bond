@@ -1,2 +1,2 @@
 #!/bin/bash
-chmode 007 ./hello
+chmode 007 hello
