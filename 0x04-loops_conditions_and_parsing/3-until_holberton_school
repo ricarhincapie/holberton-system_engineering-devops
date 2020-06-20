@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script prints "Holberton School" ten times using until flow control
+x=10
+until [ $x -eq 0 ]
+do
+    echo "Holberton School"
+    x=$((x - 1))    
+done

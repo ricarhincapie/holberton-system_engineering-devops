@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Script to print 12 hours with its minutes 
+hours=0
+while [ $hours -lt 24 ]
+do
+    minutes=1
+    echo "Hour: $hours"
+    hours=$((hours=hours + 1))
+
+    while [ $minutes -lt 60 ]
+    do
+        echo "$minutes"
+        minutes=$((minutes=minutes + 1))
+    done
+done

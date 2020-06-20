@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script prints 'Holberton School' ten times using while flow control
+x=0
+while [ $x -le 9 ]
+do
+    echo "Holberton School"
+    x=$((x + 1))
+done
