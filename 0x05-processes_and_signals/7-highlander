@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script that prints infinitely a phrase and uses Trap!
+x=0
+trap "echo I am invincible!!!" SIGTERM
+while [ $x -eq 0 ]
+do
+    echo "To infinity and beyond"
+    sleep 2
+done

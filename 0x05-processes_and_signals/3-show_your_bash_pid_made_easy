@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script that shows bash called processes and its PIDs
+
+pgrep -l bash

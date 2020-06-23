@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script that prints infinitely a phrase
+pkill -f 7-highlander
