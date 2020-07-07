@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script uses netstat to get the list of only listening sockets
+
+netstat --listen --program
