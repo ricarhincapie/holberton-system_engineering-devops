@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Takes the active IPv4 and prints its IPv4
+
+ifconfig | grep -o -P "(?<=addr:).*?(?= \s)"
