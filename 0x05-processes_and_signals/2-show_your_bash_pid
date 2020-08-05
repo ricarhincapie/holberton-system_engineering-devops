@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Script that show its own PID -e for all, -H for hierarchy, u for user-oriented format
 # shellcheck disable=SC2009
-ps auxf | grep "bash"
+ps auxf | tr -s " "| grep "bash" | cut -d " " -f1,3,6
