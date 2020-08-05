@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script creates a ssh key pair, 4096 bits and passphrase betty
+ssh-keygen -b 4096 -f holberton -N betty
