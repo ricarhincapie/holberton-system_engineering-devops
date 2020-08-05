@@ -1,7 +1,8 @@
 # This file creates a new file with some basic settings
-file { '/tmp/holberton':
+file { 'holberton':
 ensure  =>  'present',
-content =>  'I love Puppet'
+path    =>  '/tmp/holberton',
+content =>  'I love Puppet',
 owner   =>  'www-data',
 group   =>  'www-data',
 mode    =>  '0744',
