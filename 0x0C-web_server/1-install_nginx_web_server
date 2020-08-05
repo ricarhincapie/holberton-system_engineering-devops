@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script installs nginx in a local machine
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+touch /var/www/html/index.html
+echo "Holberton School" > /var/www/html/index.html
