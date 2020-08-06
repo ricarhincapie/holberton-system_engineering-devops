@@ -5,5 +5,5 @@ apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 touch /var/www/html/index.html
 echo "Holberton School" > /var/www/html/index.html
-sed -i  's/^#server.*/rewrite \/redirect_me\/   https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;/' /etc/nginx/nginx.conf
+sed -i  's/# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000/rewrite \/redirect_me\/   https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;/' /etc/nginx/sites-available/default
 sudo service nginx restart
