@@ -14,7 +14,7 @@ sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-available/default
 new_string="server_name _;\n\terror_page 404 \/my_404.html;"
 sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-available/default
 sed -i "/listen 80 default_server/a add_header X-Served-By '$HOSTNAME';" /etc/nginx/sites-available/default
-str=$'backend holberton \n \t balance roundrobin \n \t server 1516-web-01 34.75.248.42:80 \n \t server 1516-web-02 54.234.64.157:80 \n'
+str=$'backend holberton \n \t balance roundrobin \n \t server 1516-web-01 34.75.248.42:80 check \n \t server 1516-web-02 54.234.64.157:80 check \n'
 echo "$str" >> /etc/haproxy/haproxy.cfg
 ufw allow 'Nginx HTTP'
 service nginx stop
