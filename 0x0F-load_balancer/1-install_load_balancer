@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # install and configure load balancer
-# version greater or equal to 1.5 
+# version greater or equal to 1.5
 # distribute request Round Robin Algorithm
 # right host name student_id-web-01, (02)
 sudo apt-get -y update
 sudo apt-get install -y haproxy=1.6\*
 FILE=/etc/haproxy/haproxy.cfg
-echo "listen 1464-lb-01" | sudo tee -a $FILE
+echo "listen 1516-lb-01" | sudo tee -a $FILE
 echo "bind *:80" | sudo tee -a $FILE
 echo "mode http" | sudo tee -a $FILE
 echo "balance roundrobin" | sudo tee -a $FILE
-echo "server 1464-web-01 35.231.195.75 check" | sudo tee -a $FILE
-echo "server 1464-web-02 52.91.219.244 check" | sudo tee -a $FILE
+echo "server 1516-web-01 34.75.248.42:80 check" | sudo tee -a $FILE
+echo "server 1516-web-02 54.234.64.157:80 check" | sudo tee -a $FILE
 sudo service haproxy restart

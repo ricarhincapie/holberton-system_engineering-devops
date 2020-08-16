@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Installs nginx, configures a redirection on /redirect_me
+# and a custom 404 page
+
+apt update
+apt -y install software-properties-common
+add-apt-repository ppa:vbernat/haproxy-1.8
+apt-get -y install haproxy=1.8.\*
+
+str=$'frontend holberton_f \n \t bind *:80 \n \t mode http \n'
+echo "$str" >> /etc/haproxy/haproxy.cfg
+str=$'backend holberton \n \t balance roundrobin \n \t server 1516-web-01 34.75.248.42:80 check \n \t server 1516-web-02 54.234.64.157:80 check \n'
+echo "$str" >> /etc/haproxy/haproxy.cfg
+service haproxy restart
