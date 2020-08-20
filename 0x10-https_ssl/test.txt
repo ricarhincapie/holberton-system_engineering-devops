@@ -1,0 +1,54 @@
+
+; <<>> DiG 9.9.5-3ubuntu0.19-Ubuntu <<>> lb-01.globan.tech web-01.globan.tech web-02.globan.tech
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3802
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;lb-01.globan.tech.		IN	A
+
+;; ANSWER SECTION:
+lb-01.globan.tech.	28551	IN	A	54.221.173.6
+
+;; Query time: 34 msec
+;; SERVER: 10.0.2.3#53(10.0.2.3)
+;; WHEN: Wed Aug 19 23:52:26 UTC 2020
+;; MSG SIZE  rcvd: 62
+
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 64551
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;web-01.globan.tech.		IN	A
+
+;; ANSWER SECTION:
+web-01.globan.tech.	28703	IN	A	34.75.248.42
+
+;; Query time: 31 msec
+;; SERVER: 10.0.2.3#53(10.0.2.3)
+;; WHEN: Wed Aug 19 23:52:26 UTC 2020
+;; MSG SIZE  rcvd: 63
+
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 845
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;web-02.globan.tech.		IN	A
+
+;; ANSWER SECTION:
+web-02.globan.tech.	28703	IN	A	54.234.64.157
+
+;; Query time: 29 msec
+;; SERVER: 10.0.2.3#53(10.0.2.3)
+;; WHEN: Wed Aug 19 23:52:26 UTC 2020
+;; MSG SIZE  rcvd: 63
+
