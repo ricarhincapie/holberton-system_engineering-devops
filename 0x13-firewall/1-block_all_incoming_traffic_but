@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 # Script to set up a Firewall with certain permissions
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
 sudo ufw allow 22
 sudo ufw allow 80
 sudo ufw allow 443
 sudo ufw enable
 sudo ufw reload
-sudo ufw status verbose
