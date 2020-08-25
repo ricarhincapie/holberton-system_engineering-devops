@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Changes the user in a server
+# cat /etc/passwd | cut -d":" -f 1 | grep www | wc -l
+
+sudo -u "$1" "whoami"
