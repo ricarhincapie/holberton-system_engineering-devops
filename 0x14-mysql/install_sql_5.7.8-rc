@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script to install a 5.7.8-rc in a Ubuntu Linux 16.04 LTS
+
+sudo apt-get update
+sudo apt-get remove --purge mysql-server mysql-client mysql-common -y
+sudo apt-get autoremove -y
+sudo apt-get clean -y
+sudo apt-get -y install mysql-server=5.7.31-0ubuntu0.16.04.1
+sudo apt-cache policy mysql-server
