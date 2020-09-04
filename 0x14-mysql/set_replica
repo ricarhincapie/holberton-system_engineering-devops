@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Set a replica config for SQL
+sudo ufw allow 3306
+sudo ufw reload
+sudo sed -i 's/^bind-address.*127.0.0.1$/#bind-address = 127.0.0.1/g' /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo sed -i '/^#bind-address.*127.0.0.1/a server-id = 1' /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo sed -i '/^server-id = 1/a log_bin = /var/log/mysql/mysql-bin.log' /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo sed -i '/^server-id = 1/a binlog_do_db = tyrell_corp' /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo service mysql restart
