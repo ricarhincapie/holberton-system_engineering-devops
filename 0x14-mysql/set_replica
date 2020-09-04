@@ -7,3 +7,4 @@ sudo sed -i '/^#bind-address.*127.0.0.1/a server-id = 1' /etc/mysql/mysql.conf.d
 sudo sed -i '/^server-id = 1/a log_bin = /var/log/mysql/mysql-bin.log' /etc/mysql/mysql.conf.d/mysqld.cnf
 sudo sed -i '/^server-id = 1/a binlog_do_db = tyrell_corp' /etc/mysql/mysql.conf.d/mysqld.cnf
 sudo service mysql restart
+sudo mysqldump -u root -p --opt tyrell_corp > tyrell_corp.sql
