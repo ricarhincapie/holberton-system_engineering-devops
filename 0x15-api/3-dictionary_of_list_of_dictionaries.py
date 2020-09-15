@@ -49,5 +49,4 @@ if __name__ == '__main__':
             tmp_dic.update({'completed': task.get('completed')})
             my_list.append(tmp_dic)
     my_dic.update({cnt_usr: my_list})
-    print(my_dic)
     json.dump(my_dic, json_f)
