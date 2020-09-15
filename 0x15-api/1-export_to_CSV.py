@@ -27,7 +27,8 @@ if __name__ == '__main__':
         file_title = empid + ".csv"
         csv_file = open(file_title, 'w')
         header = ['USER_ID', 'USERNAME', 'TASK_COMPLETED', 'TASK_TITLE']
-        csv_writer = csv.DictWriter(csv_file, fieldnames=header)
+        csv_writer = csv.DictWriter(csv_file, fieldnames=header,
+                                    quoting=csv.QUOTE_ALL)
 
         # Orders data into a dictionary to pass it to csv writter
         my_dict = {"USER_ID": {}, "USERNAME": {},
@@ -44,11 +45,15 @@ if __name__ == '__main__':
             count += 1
         # Writes dictionary data in csv format
         goal = 0
+        q = "\""
         while goal < count:
-            tmp1 = my_dict.get('TASK_COMPLETED').get(goal)
-            tmp2 = my_dict.get('TASK_TITLE').get(goal)
-            csv_writer.writerow({'USER_ID': str(my_dict.get('USER_ID').get(goal)),
-                                'USERNAME': str(my_dict.get('USERNAME').get(goal)),
-                                'TASK_COMPLETED': str(tmp1),
-                                'TASK_TITLE': str(tmp2)})
+            # tmp1 = '"%s"' % str(my_dict.get('USER_ID').get(goal))
+            tmp1 = my_dict.get('USER_ID').get(goal)
+            tmp2 = my_dict.get('USERNAME').get(goal)
+            tmp3 = my_dict.get('TASK_COMPLETED').get(goal)
+            tmp4 = my_dict.get('TASK_TITLE').get(goal)
+            csv_writer.writerow({'USER_ID': tmp1,
+                                'USERNAME': tmp2,
+                                'TASK_COMPLETED': tmp3,
+                                'TASK_TITLE': tmp4})
             goal += 1
