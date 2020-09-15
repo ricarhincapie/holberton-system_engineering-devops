@@ -47,8 +47,8 @@ if __name__ == '__main__':
         while goal < count:
             tmp1 = my_dict.get('TASK_COMPLETED').get(goal)
             tmp2 = my_dict.get('TASK_TITLE').get(goal)
-            csv_writer.writerow({'USER_ID': my_dict.get('USER_ID').get(goal),
-                                'USERNAME': my_dict.get('USERNAME').get(goal),
-                                'TASK_COMPLETED': tmp1,
-                                'TASK_TITLE': tmp2})
+            csv_writer.writerow({'USER_ID': str(my_dict.get('USER_ID').get(goal)),
+                                'USERNAME': str(my_dict.get('USERNAME').get(goal)),
+                                'TASK_COMPLETED': str(tmp1),
+                                'TASK_TITLE': str(tmp2)})
             goal += 1
