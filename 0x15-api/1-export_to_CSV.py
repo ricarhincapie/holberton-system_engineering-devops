@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+
 """Module to fetch data from
-https://jsonplaceholder.typicode.com/ API"""
+https://jsonplaceholder.typicode.com/ API
+"""
 
 
 if __name__ == '__main__':
