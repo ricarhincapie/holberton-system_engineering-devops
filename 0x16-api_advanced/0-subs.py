@@ -16,7 +16,7 @@ def number_of_subscribers(subreddit):
                               85.0.4183.102 Safari/537.36"}
     response = requests.get(url, headers=headers, allow_redirects=False)
 
-    if response:
+    if response.status_code < 201:
         json_response = response.json()
         return(json_response.get('data').get('subscribers'))
     else:
