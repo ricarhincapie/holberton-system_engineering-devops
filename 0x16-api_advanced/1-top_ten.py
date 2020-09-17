@@ -9,7 +9,7 @@ import requests
 def top_ten(subreddit):
     """Takes a subreddir and makes a GET requests
     """
-    url = "https://www.reddit.com/r/{}/top.json".format(subreddit)
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
 
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) \
                               AppleWebKit/537.36 (KHTML, like Gecko) Chrome/\
