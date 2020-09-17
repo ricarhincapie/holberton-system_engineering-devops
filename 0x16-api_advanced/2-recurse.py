@@ -15,7 +15,7 @@ def recurse(subreddit, hot_list=[], after=None):
                             allow_redirects=False,
                             params=query,
                             headers={'User-Agent': 'MyMachintosh'})
-    if response and response.status_code == 200:
+    if response and response.status_code < 300:
         after = response.json().get('data').get('after')
         if (after is None or len(hot_list) == 10):
             return hot_list
